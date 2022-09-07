@@ -11,11 +11,11 @@ const About = () => {
       height={500}
     >
       <Typography variant="h5">
-        This application is build to practice MERN stack and apply CRUD
+        This application was build to practice MERN stack and apply CRUD
         operation.
       </Typography>
       <Typography variant="h5">
-        Contact developer in case of any suggestions or queries via github
+        Contact developer in case of any suggestions or queries via github. All inputs are appreciated. Thank you!
       </Typography>
       <Typography variant="h6">
        https://github.com/Antimalware-exe
