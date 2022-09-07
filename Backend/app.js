@@ -1,8 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const router = require("./routes/bookRoutes");
+const Constants = require("./Constants");
 const app = express();
-var cors = require('cors');
+var cors = require("cors");
 app.use(cors());
 
 // app.use("/", (req, res, next) => {
@@ -12,9 +13,7 @@ app.use(express.json());
 app.use("/books", router); //localhost:5000/books
 
 mongoose
-  .connect(
-    "mongodb+srv://shubham:nSzkyaPazElr4DnS@mern-learn.o6vxdey.mongodb.net/?retryWrites=true&w=majority"
-  )
+  .connect(Constants.__MongoTOKEN__) // create Constants.js file having token value
   .then(() => console.log("connected to DB"))
   .then(() => {
     app.listen(5000);
