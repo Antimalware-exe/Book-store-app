@@ -1,16 +1,17 @@
 ul {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+  padding-inline-start: 10px;
 }
 
 li {
-  padding: 10px;
+  padding: 8px;
   max-width: 250px;
   width: 250px;
-  max-height: 400px;
+  max-height: 530px;
   list-style: none;
 }
 

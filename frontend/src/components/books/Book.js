@@ -1,10 +1,23 @@
 import { Button } from "@mui/material";
+import axios from "axios";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Books.css";
 
 const Book = (props) => {
   const { _id, name, author, description, price } = props.book;
+  const history = useNavigate();
+
+  const deleteHandler = () => {
+    // const confirmDelete = window.confirm(`Confirm delete '${name}'?`);
+    // if (confirmDelete) {
+      axios
+        .delete(`http://localhost:5000/books/${_id}`)
+        .then((res) => res.data)
+        .then(() => history("/"))
+        .then(() => history("/books"));
+    // }
+  };
   return (
     <div className="card">
       <img
@@ -18,7 +31,7 @@ const Book = (props) => {
       <Button LinkComponent={Link} to={`/books/${_id}`}>
         Update
       </Button>
-      <Button>Delete</Button>
+      <Button onClick={deleteHandler}>Delete</Button>
     </div>
   );
 };
