@@ -1,0 +1,43 @@
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+li {
+  padding: 10px;
+  max-width: 250px;
+  width: 250px;
+  max-height: 400px;
+  list-style: none;
+}
+
+.card {
+  margin: auto;
+  padding: 1rem;
+  /* width: 250px;
+  height: 100px; */
+  box-shadow: 2px 2px 5px #ccc;
+  align-items: center;
+}
+
+.card img {
+  width: 100%;
+  height: 45% !important;
+}
+
+.card h3 {
+  margin: 0;
+  padding: 5px;
+}
+
+.card p {
+  margin: 0;
+  padding: 3px;
+}
+
+.card h2 {
+  margin: 0;
+}

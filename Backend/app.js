@@ -2,6 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const router = require("./routes/bookRoutes");
 const app = express();
+var cors = require('cors');
+app.use(cors());
 
 // app.use("/", (req, res, next) => {
 //   res.send("This is the starting app");
